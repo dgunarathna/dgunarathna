@@ -16,7 +16,7 @@ Building usable, accessible, and scalable digital products for global users.
 
 <hr />
 
-<h2>🌍 Profile Snapshot (For International Recruiters)</h2>
+<h2>🌍 Profile Snapshot</h2>
 <ul>
   <li>📍 Based in Sri Lanka — open to <strong>EU / UK / global opportunities</strong></li>
   <li>🎓 IT Undergraduate with strong engineering fundamentals</li>
