@@ -16,7 +16,7 @@ Here are some ideas to get you started:
 -->
 
 
-<h1 align="center">Hi 👋, I'm Dhanushka Lakshan Gunarathna</h1>
+<h1 align="center">Hi 👋, I'm Dhanushka Gunarathna</h1>
 <h3 align="center">A passionate UX Engineer from Sri Lanka</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=dgunarathna&label=Profile%20views&color=0e75b6&style=flat" alt="dgunarathna" /> </p>
