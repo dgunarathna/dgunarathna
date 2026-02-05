@@ -1,7 +1,7 @@
 <h1 align="center">Hi, I'm Dhanushka 👋</h1>
 
 <h3 align="center">
-UX Designer • UX Engineer (in progress) • Frontend-focused
+UX/Product Designer • UX/Product Engineer • Frontend-focused
 </h3>
 
 <p align="center">
