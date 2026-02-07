@@ -1,145 +1,41 @@
-<h1 align="center">Hi, I'm Dhanushka 👋</h1>
+Hi ![](https://user-images.githubusercontent.com/18350557/176309783-0785949b-9127-417c-8b55-ab5a4333674e.gif) My name is Dhanushka Gunarathna
+=============================================================================================================================================
 
-<h3 align="center">
-UX/Product Designer • UX/Product Engineer • Frontend-focused
-</h3>
+UX/Product Design Engineer
+--------------------------
 
-<p align="center">
-UX Designer with <strong>3+ years of professional experience</strong>, transitioning into 
-<strong>UX Engineer / Design + Frontend roles</strong> by combining user-centered design,
-research-driven decisions, and clean frontend implementation.
+UX Designer with 4+ years of experience bridging design and frontend development to build scalable, user-centric
+
+products used by 80M+ global users. Expert in translating UX concepts into high-quality React interfaces, reducing
+
+design–development gaps, and delivering production-ready UI systems. Strong background in SaaS, iOS and design
+
+systems with hands-on frontend implementation.
+
+* 🌍  I'm based in Sri Lanka
+* 🖥️  See my portfolio at [Figma](http://https://www.figma.com/@dgunarathna)
+* ✉️  You can contact me at [dhanushkalakshan18@gmail.com](mailto:dhanushkalakshan18@gmail.com)
+* 🚀  I'm currently working on [Ereamart](http://https://github.com/dgunarathna/ereamart)
+
+<p align="left">
+<a href="https://spring.io/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/spring-boot-colored.svg" alt="Spring Boot" title="Spring Boot" width="36" height="36" /></a><a href="https://git-scm.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/git-colored.svg" alt="Git" title="Git" width="36" height="36" /></a><a href="https://www.oracle.com/java/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/java-colored.svg" alt="Java" title="Java" width="36" height="36" /></a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg" alt="JavaScript" title="JavaScript" width="36" height="36" /></a><a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/typescript-colored.svg" alt="TypeScript" title="TypeScript" width="36" height="36" /></a><a href="https://code.visualstudio.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/visualstudiocode-colored.svg" alt="VS Code" title="VS Code" width="36" height="36" /></a><a href="https://reactjs.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg" alt="React" title="React" width="36" height="36" /></a><a href="https://vuejs.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/vuejs-colored.svg" alt="Vue" title="Vue" width="36" height="36" /></a><a href="https://sass-lang.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/sass-colored.svg" alt="Sass" title="Sass" width="36" height="36" /></a><a href="https://jquery.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/jquery-colored.svg" alt="JQuery" title="JQuery" width="36" height="36" /></a><a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/tailwindcss-colored.svg" alt="TailwindCSS" title="TailwindCSS" width="36" height="36" /></a><a href="https://vitejs.dev/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/vite-colored.svg" alt="Vite" title="Vite" width="36" height="36" /></a><a href="https://ui.shadcn.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/shadcnui-colored-dark.svg" alt="Shadcn/ui" title="Shadcn/ui" width="36" height="36" /></a><a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg" alt="HTML5" title="HTML5" width="36" height="36" /></a><a href="https://nodejs.org/en/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nodejs-colored.svg" alt="NodeJS" title="NodeJS" width="36" height="36" /></a><a href="https://www.mysql.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/mysql-colored.svg" alt="MySQL" title="MySQL" width="36" height="36" /></a><a href="https://www.postgresql.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/postgresql-colored.svg" alt="PostgreSQL" title="PostgreSQL" width="36" height="36" /></a><a href="https://www.figma.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/figma-colored.svg" alt="Figma" title="Figma" width="36" height="36" /></a><a href="https://www.sketch.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/sketch-colored.svg" alt="Sketch" title="Sketch" width="36" height="36" /></a><a href="https://apple.com" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/macos-colored-dark.svg" alt="MacOS" title="MacOS" width="36" height="36" /></a><a href="https://www.docker.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/docker-colored.svg" alt="Docker" title="Docker" width="36" height="36" /></a>
 </p>
 
-<p align="center">
-Building usable, accessible, and scalable digital products for global users.
-</p>
+### Socials
 
-<hr />
+<p align="left"> <a href="https://www.github.com/dgunarathna" target="_blank" rel="noreferrer"> <picture> <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github-dark.svg" /> <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github.svg" /> <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github.svg" width="32" height="32" alt="GitHub" title="GitHub" /> </picture> </a> <a href="https://www.linkedin.com/in/dlgunarathna" target="_blank" rel="noreferrer"> <picture> <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin-dark.svg" /> <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin.svg" /> <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin.svg" width="32" height="32" alt="LinkedIn" title="LinkedIn" /> </picture> </a></p>
+<a href="https://www.github.com/dgunarathna" target="_blank" rel="noreferrer"><img
+src="https://img.shields.io/github/followers/dgunarathna?logo=github&style=for-the-badge&color=14b8a6&labelColor=581c87" /></a>
+### Badges
 
-<h2>🌍 Profile Snapshot</h2>
-<ul>
-  <li>📍 Based in Sri Lanka — open to <strong>EU / UK / global opportunities</strong></li>
-  <li>🎓 IT Undergraduate with strong engineering fundamentals</li>
-  <li>🎨 3+ years delivering real-world UX for production systems</li>
-  <li>💻 Actively bridging design → code → usability validation</li>
-</ul>
+<b>My GitHub Stats</b>
 
-<hr />
+<a href="http://www.github.com/dgunarathna"><img src="https://github-readme-stats.vercel.app/api?username=dgunarathna&show_icons=true&hide=&count_private=true&title_color=84cc16&text_color=ffffff&icon_color=14b8a6&bg_color=581c87&hide_border=true&show_icons=true" alt="dgunarathna's GitHub stats" /></a>
 
-<h2>🧠 Design + Engineering Focus</h2>
-<ul>
-  <li>User-centered design & design thinking</li>
-  <li>Design systems & scalable UI patterns</li>
-  <li>Design-to-code workflows</li>
-  <li>Frontend usability & accessibility</li>
-  <li>Data-informed UX decisions</li>
-</ul>
+<a href="http://www.github.com/dgunarathna"><img src="https://github-readme-streak-stats.herokuapp.com/?user=dgunarathna&stroke=ffffff&background=581c87&ring=84cc16&fire=84cc16&currStreakNum=ffffff&currStreakLabel=84cc16&sideNums=ffffff&sideLabels=ffffff&dates=ffffff&hide_border=true" /></a>
 
-<hr />
+<a href="https://github.com/dgunarathna" align="left"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=dgunarathna&langs_count=10&title_color=84cc16&text_color=ffffff&icon_color=14b8a6&bg_color=581c87&hide_border=true&locale=en&custom_title=Top%20%Languages" alt="Top Languages" /></a>
 
-<h2>🛠 Skills</h2>
+<b>Top Repositories</b>
 
-<h3>💻 Frontend & Engineering</h3>
-<ul>
-  <li>HTML (semantic, accessible)</li>
-  <li>CSS (responsive layouts, design systems)</li>
-  <li>JavaScript <em>(actively building)</em></li>
-  <li>VS Code</li>
-</ul>
-
-<h3>🎨 UX Research & Design</h3>
-<ul>
-  <li>UX Research: Interviews, Surveys, Focus Groups</li>
-  <li>Personas, User Journeys & User Flows</li>
-  <li>Site Maps & Information Architecture</li>
-  <li>Wireframes & High-fidelity Prototypes</li>
-  <li>Interaction Design</li>
-  <li>Usability Testing (Formative & Summative)</li>
-  <li>Heuristic Evaluation & Cognitive Walkthroughs</li>
-  <li>A/B Testing & Controlled Experiments</li>
-  <li>Log Analysis, Field Studies & Eye Tracking</li>
-</ul>
-
-<hr />
-
-<h2>🧰 Tools</h2>
-<ul>
-  <li>Figma / FigJam</li>
-  <li>Miro</li>
-  <li>Jira</li>
-  <li>Trello</li>
-  <li>Visualeyes</li>
-  <li>Adobe Photoshop</li>
-  <li>Adobe Illustrator</li>
-  <li>Sketch</li>
-  <li>Adobe XD</li>
-</ul>
-
-<hr />
-
-<h2>🤝 Soft Skills</h2>
-<ul>
-  <li>Empathy & user advocacy</li>
-  <li>Clear communication</li>
-  <li>Critical thinking</li>
-  <li>Cross-functional collaboration</li>
-  <li>Problem solving</li>
-  <li>Presentation & UX storytelling</li>
-  <li>Time management & prioritization</li>
-</ul>
-
-<hr />
-
-<h2 align="center">📊 Engineering & Design Activity</h2>
-
-<p align="center">
-  <img
-    src="https://github-readme-stats.vercel.app/api?username=YOUR_GITHUB_USERNAME&show_icons=true&include_all_commits=true&count_private=true&hide_border=true"
-    height="160"
-    alt="GitHub Stats"
-  />
-  <img
-    src="https://github-readme-streak-stats.herokuapp.com?user=YOUR_GITHUB_USERNAME&hide_border=true"
-    height="160"
-    alt="GitHub Streak"
-  />
-</p>
-
-<p align="center">
-  <img
-    src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_GITHUB_USERNAME&layout=compact&hide_border=true"
-    height="140"
-    alt="Top Languages"
-  />
-</p>
-
-<p align="center">
-  <em>
-    Consistently building design-to-code projects with a focus on usability, accessibility, and scalable frontend architecture.
-  </em>
-</p>
-
-<hr />
-
-<h2>📌 Current Goals</h2>
-<ul>
-  <li>Secure a <strong>UX Engineer / Frontend UX</strong> role in an international team</li>
-  <li>Strengthen JavaScript & modern frontend patterns</li>
-  <li>Build end-to-end UX → code case studies</li>
-  <li>Prepare for MSc opportunities in UX / HCI / Product Design</li>
-</ul>
-
-<hr />
-
-<h2>📫 Connect</h2>
-<ul>
-  <li>💼 LinkedIn: <a href="https://linkedin.com/in/YOUR_LINK">linkedin.com/in/YOUR_LINK</a></li>
-  <li>🎨 Portfolio: <a href="https://yourportfolio.com">yourportfolio.com</a></li>
-  <li>📧 Email: <em>Optional</em></li>
-</ul>
-
-<p>
-<em>
-“Good design is obvious. Great design is transparent.”
-</em>
-</p>
+<div width="100%" align="center"></div><br /><br /><br /><br /><br /><br /><br />
