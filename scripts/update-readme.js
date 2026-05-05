@@ -27,7 +27,7 @@ function getOwnedRepositories() {
 }
 
 function getAllRecentCommits() {
-  const repos = getOwnedRepositories();
+  const repos = getOwnedRepositories().filter((repo) => repo.toLowerCase() !== `${USER.toLowerCase()}/${USER.toLowerCase()}`);
   const commits = [];
   const pageSize = 100;
 
@@ -310,32 +310,45 @@ No recent commits were returned by GitHub. This usually means the workflow token
 `;
   }
 
-  const sortedCommits = commits.slice().sort((a, b) => new Date(b.date) - new Date(a.date));
-  const uniqueRepos = [...new Set(sortedCommits.map((commit) => commit.repo))];
+  const commitsByRepo = commits.reduce((acc, commit) => {
+    if (!acc[commit.repo]) acc[commit.repo] = [];
+    acc[commit.repo].push(commit);
+    return acc;
+  }, {});
+
+  const sortedRepos = Object.keys(commitsByRepo).sort();
+  const totalCommits = commits.length;
+  const totalRepos = sortedRepos.length;
 
   let markdown = `| 📊 Total commits | 📁 Repos |
 `;
   markdown += `| :---: | :---: |
 `;
-  markdown += `| ${sortedCommits.length} | ${uniqueRepos.length} |
+  markdown += `| ${totalCommits} | ${totalRepos} |
 
 `;
-  markdown += `| Date | Repository | Commit | Author |
+
+  sortedRepos.forEach((repo) => {
+    const repoCommits = commitsByRepo[repo].sort((a, b) => new Date(b.date) - new Date(a.date));
+    markdown += `### 📦 ${repo}
+
 `;
-  markdown += `| :--- | :--- | :--- | :--- |
+    markdown += `| Date | Commit | Author |
+`;
+    markdown += `| :--- | :--- | :--- |
 `;
 
-  sortedCommits.forEach((commit) => {
-    const date = formatDate(commit.date);
-    const commitLink = `[${commit.message}](${commit.url})`;
-    const repoLabel = commit.repo;
-    const authorLabel = commit.authorName || USER;
-
-    markdown += `| ${date} | ${repoLabel} | ${commitLink} | ${authorLabel} |
+    repoCommits.forEach((commit) => {
+      const date = formatDate(commit.date);
+      const commitLink = `[${commit.message}](${commit.url})`;
+      const authorLabel = commit.authorName || USER;
+      markdown += `| ${date} | ${commitLink} | ${authorLabel} |
 `;
+    });
+
+    markdown += `\n`;
   });
 
-  markdown += `\n---\n\n`;
   return markdown;
 }
 
