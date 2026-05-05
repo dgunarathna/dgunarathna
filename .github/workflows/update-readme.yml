@@ -1,0 +1,96 @@
+name: Update Profile Contributions + Email Report
+
+on:
+  schedule:
+    - cron: "0 * * * *" # every hour
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      # -----------------------
+      # 1. Checkout repo
+      # -----------------------
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      # -----------------------
+      # 2. Setup Node
+      # -----------------------
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+
+      # -----------------------
+      # 3. Install GitHub CLI
+      # -----------------------
+      - name: Install GitHub CLI
+        run: |
+          sudo apt update
+          sudo apt install gh -y
+
+      # -----------------------
+      # 4. Configure GitHub CLI
+      # -----------------------
+      - name: Configure GitHub CLI
+        run: |
+          if [ -z "${{ secrets.GH_PAT }}" ]; then
+            echo "Missing required secret GH_PAT (repo/org PAT with PR read access)."
+            exit 1
+          fi
+          echo "${{ secrets.GH_PAT }}" | gh auth login --with-token
+
+      # -----------------------
+      # 5. Generate contributions
+      # -----------------------
+      - name: Update contributions
+        run: node scripts/update-readme.js
+
+      # -----------------------
+      # 6. Create diff
+      # -----------------------
+      - name: Create diff
+        run: diff README_old.md README.md > changes.txt || true
+
+      # -----------------------
+      # 7. Commit changes
+      # -----------------------
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add README.md
+          git commit -m "chore: update profile contributions" || exit 0
+          git push
+
+      # -----------------------
+      # 7. Send email (SMTP)
+      # -----------------------
+      - name: Send email notification
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.EMAIL_USER }}
+          password: ${{ secrets.EMAIL_PASS }}
+          subject: "GitHub Profile Updated - Daily Report"
+          to: dhanushkalakshan18@gmail.com
+          from: GitHub Actions <${{ secrets.EMAIL_USER }}>
+          body: |
+            🚀 Daily GitHub Profile Update
+
+            Your profile README has been updated.
+
+            📌 Summary:
+            - Contributions section refreshed
+            - Latest merged PRs included
+
+            📄 Diff:
+            ${{ steps.diff.outputs.content }}
