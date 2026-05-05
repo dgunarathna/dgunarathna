@@ -39,10 +39,11 @@ UX/Product Design Engineer
 <!-- AUTO-GENERATED SECTION START -->
 | 📊 Total commits | 📁 Repos |
 | :---: | :---: |
-| 456 | 10 |
+| 457 | 10 |
 
 | Date | Repository | Commit | Author |
 | :--- | :--- | :--- | :--- |
+| 5 May 2026 | dgunarathna/dgunarathna | [feat: show authored commits across repos in profile README](https://github.com/dgunarathna/dgunarathna/commit/c96878a082bd2784238988fb61ad26de9eca1cad) | dgunarathna |
 | 5 May 2026 | dgunarathna/dgunarathna | [fix: remove Creately dependency and add fallback PR search](https://github.com/dgunarathna/dgunarathna/commit/ce25d70ebfd80e2a6630a94265eb53bd58ac0689) | dgunarathna |
 | 5 May 2026 | dgunarathna/dgunarathna | [fix: allow workflow to succeed when no PRs are returned](https://github.com/dgunarathna/dgunarathna/commit/4a647cc817f1a8845cc53f08b04ac5f6e5bb2180) | dgunarathna |
 | 5 May 2026 | dgunarathna/dgunarathna | [chore: configure hourly README update workflow and automation](https://github.com/dgunarathna/dgunarathna/commit/67f346397c299024be92412e75888a0d9213ed1f) | dgunarathna |
@@ -449,7 +450,7 @@ UX/Product Design Engineer
 | 9 April 2024 | dgunarathna/dgweb | [7.8](https://github.com/dgunarathna/dgweb/commit/b18e7433040fe2c76988e8f4fa68e5ca6d2cc0e9) | uixdlg |
 | 8 April 2024 | dgunarathna/dgweb | [10.15](https://github.com/dgunarathna/dgweb/commit/a2db6d6cfd3b9b7b27a0aeb45f4aa25facc71b63) | uixdlg |
 | 8 April 2024 | dgunarathna/dgweb | [5.53](https://github.com/dgunarathna/dgweb/commit/e93159cb752146e6bbcb8bdd89e6241f65d2edbe) | uixdlg |
-| 8 April 2024 | dgunarathna/dgweb | [5.19](https://github.com/dgunarathna/dgweb/commit/1248ab1f9cdcece74292fa6b3dd5f7f5c7e0d7e4) | uixdlg |
+| 7 April 2024 | dgunarathna/dgweb | [5.19](https://github.com/dgunarathna/dgweb/commit/1248ab1f9cdcece74292fa6b3dd5f7f5c7e0d7e4) | uixdlg |
 | 7 April 2024 | dgunarathna/dgweb | [6.45](https://github.com/dgunarathna/dgweb/commit/911a03136bbac7638a9d463bdf03de399a0fbcbd) | uixdlg |
 | 7 April 2024 | dgunarathna/dgweb | [6.10](https://github.com/dgunarathna/dgweb/commit/424ac716a7b847c8b0e243e6202c5388e1bdb1a5) | uixdlg |
 | 7 April 2024 | dgunarathna/dgweb | [6.6](https://github.com/dgunarathna/dgweb/commit/d7f31bee7efe46bce6bf48ca0971bf540f617810) | uixdlg |
