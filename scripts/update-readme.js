@@ -207,9 +207,10 @@ function updateReadme() {
     let readmeContent = fs.readFileSync(README_PATH, "utf8");
     const prs = getAllRecentPrs();
     if (prs.length === 0) {
-      throw new Error(
-        "No PRs returned from GitHub search. Refusing to overwrite README with an empty contributions section."
+      console.warn(
+        "Warning: No PRs returned from GitHub search. README update was skipped."
       );
+      return;
     }
     const contributions = parseContributionsFile();
     const newContributions = generateContributionsSection(prs, contributions);
