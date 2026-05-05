@@ -5,6 +5,10 @@ on:
     - cron: "0 * * * *" # every hour
   workflow_dispatch:
 
+concurrency:
+  group: update-readme-${{ github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
