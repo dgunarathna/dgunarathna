@@ -75,7 +75,17 @@ jobs:
           git config user.email "github-actions@github.com"
           git add README.md
           git commit -m "chore: update profile contributions" || exit 0
-          git push
+          for attempt in 1 2 3; do
+            git pull --rebase origin main
+            if git push origin main; then
+              break
+            fi
+            if [ "$attempt" -eq 3 ]; then
+              echo "Failed to push after 3 attempts."
+              exit 1
+            fi
+            sleep 5
+          done
 
       # -----------------------
       # 7. Send email (SMTP)
