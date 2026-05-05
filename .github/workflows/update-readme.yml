@@ -58,8 +58,13 @@ jobs:
       # -----------------------
       # 6. Create diff
       # -----------------------
-      - name: Create diff
-        run: git diff -- README.md > changes.txt || true
+      - id: diff
+        name: Create diff
+        run: |
+          git diff -- README.md > changes.txt || true
+          echo "content<<EOF" >> "$GITHUB_OUTPUT"
+          cat changes.txt
+          echo "EOF" >> "$GITHUB_OUTPUT"
 
       # -----------------------
       # 7. Commit changes
@@ -93,7 +98,7 @@ jobs:
 
             📌 Summary:
             - Contributions section refreshed
-            - Latest merged PRs included
+            - Latest commit activity included
 
             📄 Diff:
             ${{ steps.diff.outputs.content }}
