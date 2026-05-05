@@ -41,7 +41,7 @@ jobs:
       - name: Configure GitHub CLI
         run: |
           if [ -z "${{ secrets.GH_PAT }}" ]; then
-            echo "Missing required secret GH_PAT (repo/org PAT with PR read access)."
+            echo "Missing required secret GH_PAT (repo PAT with PR read access)."
             exit 1
           fi
           echo "${{ secrets.GH_PAT }}" | gh auth login --with-token

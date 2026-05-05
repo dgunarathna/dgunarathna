@@ -2,16 +2,56 @@ const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
 
-const USER = "dgunarathna";
+const USER = process.env.PROFILE_USER || "dgunarathna";
 const README_PATH = path.join(__dirname, "../README.md");
 const CONTRIBUTIONS_PATH = path.join(__dirname, "../CONTRIBUTIONS.md");
 
+function parseRepositoryUrl(repositoryUrl) {
+  if (!repositoryUrl) return "unknown/unknown";
+  const parts = repositoryUrl.split("/repos/");
+  return parts.length === 2 ? parts[1] : repositoryUrl.split("/repos/").pop();
+}
+
 function getAllRecentPrs() {
-  const output = execSync(
-    `gh search prs --author ${USER} --limit 1000 --sort updated --order desc --json title,url,state,closedAt,createdAt,repository,updatedAt`,
-    { stdio: ["ignore", "pipe", "pipe"] }
-  ).toString();
-  return JSON.parse(output);
+  try {
+    const output = execSync(
+      `gh search prs --author ${USER} --limit 1000 --sort updated --order desc --json title,url,state,closedAt,createdAt,repository,updatedAt`,
+      { stdio: ["ignore", "pipe", "pipe"] }
+    ).toString();
+    const prs = JSON.parse(output);
+    if (prs.length > 0) {
+      return prs;
+    }
+  } catch (error) {
+    console.warn("Warning: gh search prs failed, falling back to API search.", error.message);
+  }
+
+  try {
+    const query = `author:${USER} is:pr`;
+    const output = execSync(
+      `gh api search/issues -f q='${query}' -f per_page=100 --jq '.items[] | {title,html_url,state,created_at,updated_at,closed_at,repository_url}'`,
+      { stdio: ["ignore", "pipe", "pipe"] }
+    ).toString();
+    const items = output
+      .split(/\r?\n/)
+      .filter(Boolean)
+      .map((line) => JSON.parse(line))
+      .map((item) => ({
+        title: item.title,
+        url: item.html_url,
+        state: item.state,
+        closedAt: item.closed_at,
+        createdAt: item.created_at,
+        updatedAt: item.updated_at,
+        repository: {
+          nameWithOwner: parseRepositoryUrl(item.repository_url),
+        },
+      }));
+    return items;
+  } catch (error) {
+    console.warn("Warning: fallback API search failed.", error.message);
+    return [];
+  }
 }
 
 function parseContributionsFile() {
