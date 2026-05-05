@@ -3,6 +3,7 @@ const path = require("path");
 const { execSync } = require("child_process");
 
 const USER = process.env.PROFILE_USER || "dgunarathna";
+const FEED_TYPE = process.env.PROFILE_FEED || "commits";
 const README_PATH = path.join(__dirname, "../README.md");
 const CONTRIBUTIONS_PATH = path.join(__dirname, "../CONTRIBUTIONS.md");
 
@@ -10,6 +11,64 @@ function parseRepositoryUrl(repositoryUrl) {
   if (!repositoryUrl) return "unknown/unknown";
   const parts = repositoryUrl.split("/repos/");
   return parts.length === 2 ? parts[1] : repositoryUrl.split("/repos/").pop();
+}
+
+function getOwnedRepositories() {
+  try {
+    const output = execSync(
+      `gh repo list ${USER} --limit 1000 --json nameWithOwner`,
+      { stdio: ["ignore", "pipe", "pipe"] }
+    ).toString();
+    return JSON.parse(output).map((repo) => repo.nameWithOwner);
+  } catch (error) {
+    console.warn("Warning: Could not list owned repositories.", error.message);
+    return [];
+  }
+}
+
+function getAllRecentCommits() {
+  const repos = getOwnedRepositories();
+  const commits = [];
+  const pageSize = 100;
+
+  repos.forEach((repo) => {
+    let page = 1;
+    while (page <= 5) {
+      try {
+        const output = execSync(
+          `gh api "repos/${repo}/commits?author=${USER}&per_page=${pageSize}&page=${page}"`,
+          { stdio: ["ignore", "pipe", "pipe"] }
+        ).toString();
+        const repoCommits = JSON.parse(output);
+        if (!Array.isArray(repoCommits) || repoCommits.length === 0) {
+          break;
+        }
+
+        repoCommits.forEach((commit) => {
+          commits.push({
+            repo,
+            sha: commit.sha,
+            message: commit.commit.message.split("\n")[0],
+            url: commit.html_url,
+            date: commit.commit.author?.date || commit.commit.committer?.date,
+            authorName: commit.commit.author?.name || commit.commit.committer?.name,
+            authorEmail: commit.commit.author?.email || commit.commit.committer?.email,
+          });
+        });
+
+        if (repoCommits.length < pageSize) {
+          break;
+        }
+
+        page += 1;
+      } catch (error) {
+        console.warn(`Warning: Failed to fetch commits for ${repo}.`, error.message);
+        break;
+      }
+    }
+  });
+
+  return commits;
 }
 
 function getAllRecentPrs() {
@@ -242,18 +301,60 @@ ${emptyMessage}
   return markdown;
 }
 
+function generateCommitContributionsSection(commits) {
+  if (commits.length === 0) {
+    return `### ${formatDate(new Date())}
+
+No recent commits were returned by GitHub. This usually means the workflow token does not have access to all repositories or there are no commits matching the configured author.
+
+`;
+  }
+
+  const sortedCommits = commits.slice().sort((a, b) => new Date(b.date) - new Date(a.date));
+  const uniqueRepos = [...new Set(sortedCommits.map((commit) => commit.repo))];
+
+  let markdown = `| 📊 Total commits | 📁 Repos |
+`;
+  markdown += `| :---: | :---: |
+`;
+  markdown += `| ${sortedCommits.length} | ${uniqueRepos.length} |
+
+`;
+  markdown += `| Date | Repository | Commit | Author |
+`;
+  markdown += `| :--- | :--- | :--- | :--- |
+`;
+
+  sortedCommits.forEach((commit) => {
+    const date = formatDate(commit.date);
+    const commitLink = `[${commit.message}](${commit.url})`;
+    const repoLabel = commit.repo;
+    const authorLabel = commit.authorName || USER;
+
+    markdown += `| ${date} | ${repoLabel} | ${commitLink} | ${authorLabel} |
+`;
+  });
+
+  markdown += `\n---\n\n`;
+  return markdown;
+}
+
 function updateReadme() {
   try {
     let readmeContent = fs.readFileSync(README_PATH, "utf8");
-    const prs = getAllRecentPrs();
-    if (prs.length === 0) {
-      console.warn(
-        "Warning: No PRs returned from GitHub search. README update was skipped."
-      );
-      return;
-    }
     const contributions = parseContributionsFile();
-    const newContributions = generateContributionsSection(prs, contributions);
+    let newContributions = "";
+    let resultCount = 0;
+
+    if (FEED_TYPE === "prs") {
+      const prs = getAllRecentPrs();
+      newContributions = generatePrContributionsSection(prs, contributions);
+      resultCount = prs.length;
+    } else {
+      const commits = getAllRecentCommits();
+      newContributions = generateCommitContributionsSection(commits);
+      resultCount = commits.length;
+    }
 
     const startMarker = "<!-- AUTO-GENERATED SECTION START -->";
     const endMarker = "<!-- AUTO-GENERATED SECTION END -->";
@@ -273,7 +374,7 @@ function updateReadme() {
 
     fs.writeFileSync(README_PATH, updatedContent, "utf8");
     console.log("✅ README.md updated successfully!");
-    console.log(`📊 Tracked ${prs.length} total contributions across repositories`);
+    console.log(`📊 Tracked ${resultCount} total contributions across repositories`);
   } catch (error) {
     console.error("Error updating README:", error.message);
     process.exit(1);

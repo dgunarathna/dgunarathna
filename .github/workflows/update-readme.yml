@@ -11,6 +11,9 @@ permissions:
 jobs:
   update:
     runs-on: ubuntu-latest
+    env:
+      PROFILE_USER: ${{ secrets.PROFILE_USER }}
+      PROFILE_FEED: commits
 
     steps:
       # -----------------------
@@ -56,7 +59,7 @@ jobs:
       # 6. Create diff
       # -----------------------
       - name: Create diff
-        run: diff README_old.md README.md > changes.txt || true
+        run: git diff -- README.md > changes.txt || true
 
       # -----------------------
       # 7. Commit changes
