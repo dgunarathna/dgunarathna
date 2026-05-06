@@ -1,6 +1,6 @@
 # Hi, I'm Dhanushka Gunarathna 👋
 
-Design Engineer working across frontend, backend, and automation workflows.
+Design Engineer bridging UX and engineering to build fast, scalable, and user-focused products.
 
 ---
 
