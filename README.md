@@ -7,6 +7,7 @@ Software Engineer working across frontend, backend, and automation workflows.
 ## 🚀 About Me
 
 * 💼 Building customer-facing web experiences and internal developer tools.
+* 🏢 Company Profile: [dhanushkacreately](https://github.com/dhanushkacreately)
 * 📦 Maintains 11 repositories with a mix of public and private projects.
 * 🧪 Focused on shipped product quality, performance, and user-first interfaces.
 * 🎯 Interested in connecting design, code, and delivery through clean engineering.
