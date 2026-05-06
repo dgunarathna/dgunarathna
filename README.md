@@ -10,7 +10,7 @@ Software Engineer working across frontend, backend, and automation workflows.
 * ⚡ Strong in fast iteration, maintainable architecture, and automation workflows
 * 🧠 Connect design, code, and delivery through clean engineering practices
 * 🛠️ Build customer-facing products and internal developer tools
-* 📂 Portfolio: [dhanushkacreately](https://github.com/dhanushkacreately)
+* 🏢 Work Profile: [dhanushkacreately](https://github.com/dhanushkacreately)
 * 📊 Maintain 11 repositories across public and private projects
 
 ---
