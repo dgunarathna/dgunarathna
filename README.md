@@ -1,6 +1,6 @@
 # Hi, I'm Dhanushka Gunarathna 👋
 
-Software Engineer working across frontend, backend, and automation workflows.
+Design Engineer working across frontend, backend, and automation workflows.
 
 ---
 
