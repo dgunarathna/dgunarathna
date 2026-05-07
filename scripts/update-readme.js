@@ -16,10 +16,10 @@ function parseRepositoryUrl(repositoryUrl) {
 function getOwnedRepositories() {
   try {
     const output = execSync(
-      `gh repo list ${USER} --limit 1000 --json nameWithOwner`,
+      `gh repo list ${USER} --limit 1000 --json nameWithOwner,name,description,url,homepageUrl`,
       { stdio: ["ignore", "pipe", "pipe"] }
     ).toString();
-    return JSON.parse(output).map((repo) => repo.nameWithOwner);
+    return JSON.parse(output);
   } catch (error) {
     console.warn("Warning: Could not list owned repositories.", error.message);
     return [];
@@ -27,7 +27,10 @@ function getOwnedRepositories() {
 }
 
 function getAllRecentCommits() {
-  const repos = getOwnedRepositories().filter((repo) => repo.toLowerCase() !== `${USER.toLowerCase()}/${USER.toLowerCase()}`);
+  const allRepos = getOwnedRepositories();
+  const repos = allRepos
+    .filter((repo) => repo.nameWithOwner.toLowerCase() !== `${USER.toLowerCase()}/${USER.toLowerCase()}`)
+    .map(repo => repo.nameWithOwner);
   const commits = [];
   const pageSize = 100;
 
@@ -337,6 +340,8 @@ No recent commits were returned by GitHub. This usually means the workflow token
 `;
     markdown += `| :--- | :--- | :--- |
 `;
+    markdown += `| :--- | :--- | :--- |
+`;
 
     repoCommits.forEach((commit) => {
       const date = formatDate(commit.date);
@@ -352,6 +357,47 @@ No recent commits were returned by GitHub. This usually means the workflow token
   return markdown;
 }
 
+function generateProductsSection(repos) {
+  if (repos.length === 0) {
+    return "No projects to display.";
+  }
+
+  const filteredRepos = repos.filter(
+    (repo) => repo.nameWithOwner.toLowerCase() !== `${USER.toLowerCase()}/${USER.toLowerCase()}`
+  );
+
+  let markdown = `| 📁 Total Products | 🌐 Live Demos |
+`;
+  markdown += `| :---: | :---: |
+`;
+  
+  const liveDemosCount = filteredRepos.filter(r => r.homepageUrl).length;
+  markdown += `| ${filteredRepos.length} | ${liveDemosCount} |
+
+`;
+
+  filteredRepos.forEach((repo) => {
+    const name = repo.name;
+    const description = repo.description || "Project developed using modern web technologies and best practices.";
+    const url = repo.url;
+    const liveLink = repo.homepageUrl;
+
+    markdown += `### 📦 [${name}](${url})\n\n`;
+    markdown += `> ${description}\n\n`;
+    
+    const links = [];
+    links.push(`[Source Code](${url})`);
+    if (liveLink) {
+      links.push(`[Live Demo](${liveLink})`);
+    }
+    
+    markdown += `${links.join(" | ")}\n\n`;
+    markdown += `---\n\n`;
+  });
+
+  return markdown;
+}
+
 function updateReadme() {
   try {
     let readmeContent = fs.readFileSync(README_PATH, "utf8");
@@ -359,7 +405,11 @@ function updateReadme() {
     let newContributions = "";
     let resultCount = 0;
 
-    if (FEED_TYPE === "prs") {
+    if (FEED_TYPE === "products") {
+      const repos = getOwnedRepositories();
+      newContributions = generateProductsSection(repos);
+      resultCount = repos.length;
+    } else if (FEED_TYPE === "prs") {
       const prs = getAllRecentPrs();
       newContributions = generatePrContributionsSection(prs, contributions);
       resultCount = prs.length;
