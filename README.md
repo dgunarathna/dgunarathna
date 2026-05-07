@@ -36,7 +36,7 @@ Design Engineer bridging UX and engineering to build fast, scalable, and user-fo
 
 ## 🚀 All Contributions
 
-**All commits across all projects - Updated hourly**
+**All commits across all projects - Updated daily**
 
 <!-- AUTO-GENERATED SECTION START -->
 | 📊 Total commits | 📁 Repos |
