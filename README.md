@@ -1,6 +1,6 @@
 # Hi, I'm Dhanushka Gunarathna 👋
 
-Design Engineer bridging UX and engineering to build fast, scalable, and user-focused products.
+Product/UX Design Engineer bridging UX and engineering to build fast, scalable, and user-focused products.
 
 ---
 
