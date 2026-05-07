@@ -40,87 +40,23 @@ Design Engineer bridging UX and engineering to build fast, scalable, and user-fo
 
 
 <!-- AUTO-GENERATED SECTION START -->
-| 📁 Total Products | 🌐 Live Demos |
+| 📁 Featured Products | 🌐 Live Demos |
 | :---: | :---: |
-| 10 | 2 |
+| 2 | 1 |
 
 ### 📦 [ereamart](https://github.com/dgunarathna/ereamart)
 
-> Project developed using modern web technologies and best practices.
+> A professional-grade Inventory Management System (IMS) built with Spring Boot, Thymeleaf, and MySQL. Features real-time stock tracking, advanced reporting, and secure role-based access control.
 
 [Source Code](https://github.com/dgunarathna/ereamart) | [Live Demo](https://ereamart.vercel.app)
 
 ---
 
-### 📦 [dgweb](https://github.com/dgunarathna/dgweb)
-
-> Project developed using modern web technologies and best practices.
-
-[Source Code](https://github.com/dgunarathna/dgweb) | [Live Demo](https://dgweb-wine.vercel.app)
-
----
-
-### 📦 [TestApp](https://github.com/dgunarathna/TestApp)
-
-> Project developed using modern web technologies and best practices.
-
-[Source Code](https://github.com/dgunarathna/TestApp)
-
----
-
-### 📦 [MadProject1](https://github.com/dgunarathna/MadProject1)
-
-> Project developed using modern web technologies and best practices.
-
-[Source Code](https://github.com/dgunarathna/MadProject1)
-
----
-
-### 📦 [todo](https://github.com/dgunarathna/todo)
-
-> Project developed using modern web technologies and best practices.
-
-[Source Code](https://github.com/dgunarathna/todo)
-
----
-
-### 📦 [todo-app](https://github.com/dgunarathna/todo-app)
-
-> Project developed using modern web technologies and best practices.
-
-[Source Code](https://github.com/dgunarathna/todo-app)
-
----
-
 ### 📦 [SketchAir](https://github.com/dgunarathna/SketchAir)
 
-> Project developed using modern web technologies and best practices.
+> An innovative design-focused application showcasing advanced UI/UX principles and interactive web components.
 
 [Source Code](https://github.com/dgunarathna/SketchAir)
-
----
-
-### 📦 [Frontend](https://github.com/dgunarathna/Frontend)
-
-> Project developed using modern web technologies and best practices.
-
-[Source Code](https://github.com/dgunarathna/Frontend)
-
----
-
-### 📦 [Practical](https://github.com/dgunarathna/Practical)
-
-> Project developed using modern web technologies and best practices.
-
-[Source Code](https://github.com/dgunarathna/Practical)
-
----
-
-### 📦 [Programming-Assignment-Little-Lemon-Receipt-Maker](https://github.com/dgunarathna/Programming-Assignment-Little-Lemon-Receipt-Maker)
-
-> Project developed using modern web technologies and best practices.
-
-[Source Code](https://github.com/dgunarathna/Programming-Assignment-Little-Lemon-Receipt-Maker)
 
 ---
 

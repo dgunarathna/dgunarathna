@@ -7,6 +7,29 @@ const FEED_TYPE = process.env.PROFILE_FEED || "commits";
 const README_PATH = path.join(__dirname, "../README.md");
 const CONTRIBUTIONS_PATH = path.join(__dirname, "../CONTRIBUTIONS.md");
 
+const EXCLUDED_REPOS = [
+  "TestApp",
+  "MadProject1",
+  "todo-app",
+  "todo",
+  "Frontend",
+  "Practical",
+  "Programming-Assignment-Little-Lemon-Receipt-Maker",
+  "dgweb",
+  "dgunarathna"
+];
+
+const REPO_METADATA_OVERRIDES = {
+  "ereamart": {
+    description: "A professional-grade Inventory Management System (IMS) built with Spring Boot, Thymeleaf, and MySQL. Features real-time stock tracking, advanced reporting, and secure role-based access control.",
+    homepageUrl: "https://ereamart.vercel.app"
+  },
+  "SketchAir": {
+    description: "An innovative design-focused application showcasing advanced UI/UX principles and interactive web components.",
+    homepageUrl: ""
+  }
+};
+
 function parseRepositoryUrl(repositoryUrl) {
   if (!repositoryUrl) return "unknown/unknown";
   const parts = repositoryUrl.split("/repos/");
@@ -363,24 +386,30 @@ function generateProductsSection(repos) {
   }
 
   const filteredRepos = repos.filter(
-    (repo) => repo.nameWithOwner.toLowerCase() !== `${USER.toLowerCase()}/${USER.toLowerCase()}`
+    (repo) => !EXCLUDED_REPOS.some(excluded => repo.name.toLowerCase() === excluded.toLowerCase())
   );
 
-  let markdown = `| 📁 Total Products | 🌐 Live Demos |
+  if (filteredRepos.length === 0) {
+    return "Coming soon...";
+  }
+
+  let markdown = `| 📁 Featured Products | 🌐 Live Demos |
 `;
   markdown += `| :---: | :---: |
 `;
   
-  const liveDemosCount = filteredRepos.filter(r => r.homepageUrl).length;
+  const liveDemosCount = filteredRepos.filter(r => r.homepageUrl || (REPO_METADATA_OVERRIDES[r.name]?.homepageUrl)).length;
   markdown += `| ${filteredRepos.length} | ${liveDemosCount} |
 
 `;
 
   filteredRepos.forEach((repo) => {
     const name = repo.name;
-    const description = repo.description || "Project developed using modern web technologies and best practices.";
+    const override = REPO_METADATA_OVERRIDES[name] || {};
+    
+    const description = override.description || repo.description || "High-performance application focused on scalability and user experience.";
     const url = repo.url;
-    const liveLink = repo.homepageUrl;
+    const liveLink = override.homepageUrl || repo.homepageUrl;
 
     markdown += `### 📦 [${name}](${url})\n\n`;
     markdown += `> ${description}\n\n`;
