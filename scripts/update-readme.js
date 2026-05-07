@@ -22,7 +22,7 @@ const EXCLUDED_REPOS = [
 const REPO_METADATA_OVERRIDES = {
   "ereamart": {
     description: "A professional-grade Inventory Management System (IMS) built with Spring Boot, Thymeleaf, and MySQL. Features real-time stock tracking, advanced reporting, and secure role-based access control.",
-    homepageUrl: "https://ereamart.vercel.app"
+    homepageUrl: "https://ereamart.onrender.com"
   },
   "SketchAir": {
     description: "An innovative design-focused application showcasing advanced UI/UX principles and interactive web components.",

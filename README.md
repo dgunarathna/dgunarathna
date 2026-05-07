@@ -48,7 +48,7 @@ Design Engineer bridging UX and engineering to build fast, scalable, and user-fo
 
 > A professional-grade Inventory Management System (IMS) built with Spring Boot, Thymeleaf, and MySQL. Features real-time stock tracking, advanced reporting, and secure role-based access control.
 
-[Source Code](https://github.com/dgunarathna/ereamart) | [Live Demo](https://ereamart.vercel.app)
+[Source Code](https://github.com/dgunarathna/ereamart) | [Live Demo](https://ereamart.onrender.com)
 
 ---
 
