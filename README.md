@@ -40,9 +40,9 @@ Design Engineer bridging UX and engineering to build fast, scalable, and user-fo
 
 
 <!-- AUTO-GENERATED SECTION START -->
-| 📁 Featured Products | 🌐 Live Demos |
-| :---: | :---: |
-| 2 | 1 |
+| 📁 Featured Products | 🌐 Live Demos | 📊 Total Commits |
+| :---: | :---: | :---: |
+| 2 | 1 | 202 |
 
 ### 📦 [ereamart](https://github.com/dgunarathna/ereamart)
 

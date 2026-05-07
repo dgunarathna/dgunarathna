@@ -380,7 +380,7 @@ No recent commits were returned by GitHub. This usually means the workflow token
   return markdown;
 }
 
-function generateProductsSection(repos) {
+function generateProductsSection(repos, commits = []) {
   if (repos.length === 0) {
     return "No projects to display.";
   }
@@ -393,13 +393,17 @@ function generateProductsSection(repos) {
     return "Coming soon...";
   }
 
-  let markdown = `| 📁 Featured Products | 🌐 Live Demos |
+  // Calculate total commits for featured repos
+  const featuredRepoNames = filteredRepos.map(r => r.nameWithOwner);
+  const totalCommits = commits.filter(c => featuredRepoNames.includes(c.repo)).length;
+
+  let markdown = `| 📁 Featured Products | 🌐 Live Demos | 📊 Total Commits |
 `;
-  markdown += `| :---: | :---: |
+  markdown += `| :---: | :---: | :---: |
 `;
   
   const liveDemosCount = filteredRepos.filter(r => r.homepageUrl || (REPO_METADATA_OVERRIDES[r.name]?.homepageUrl)).length;
-  markdown += `| ${filteredRepos.length} | ${liveDemosCount} |
+  markdown += `| ${filteredRepos.length} | ${liveDemosCount} | ${totalCommits} |
 
 `;
 
@@ -436,7 +440,8 @@ function updateReadme() {
 
     if (FEED_TYPE === "products") {
       const repos = getOwnedRepositories();
-      newContributions = generateProductsSection(repos);
+      const commits = getAllRecentCommits();
+      newContributions = generateProductsSection(repos, commits);
       resultCount = repos.length;
     } else if (FEED_TYPE === "prs") {
       const prs = getAllRecentPrs();
