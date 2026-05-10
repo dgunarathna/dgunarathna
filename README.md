@@ -63,7 +63,7 @@ Product/UX Design Engineer bridging UX and engineering to build fast, scalable, 
 
 > An innovative design-focused application showcasing advanced UI/UX principles and interactive web components.
 
-*Coming Soon* 
+*Coming Soon*
 
 [Source Code](https://github.com/dgunarathna/SketchAir)
 
