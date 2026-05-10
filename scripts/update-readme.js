@@ -22,11 +22,20 @@ const EXCLUDED_REPOS = [
 const REPO_METADATA_OVERRIDES = {
   "ereamart": {
     description: "A professional-grade Inventory Management System (IMS) built with Spring Boot, Thymeleaf, and MySQL. Features real-time stock tracking, advanced reporting, and secure role-based access control.",
-    homepageUrl: "https://ereamart.onrender.com"
+    homepageUrl: "https://ereamart.onrender.com",
+    techStack: {
+      languages: ["Java"],
+      backend: ["Spring Boot", "Spring Data JPA", "Lombok"],
+      frontend: ["Thymeleaf", "Bootstrap", "jQuery", "DataTables", "Chart.js"],
+      database: ["MySQL", "H2"],
+      buildTool: ["Gradle"],
+      testing: ["JUnit"]
+    }
   },
   "SketchAir": {
     description: "An innovative design-focused application showcasing advanced UI/UX principles and interactive web components.",
-    homepageUrl: ""
+    homepageUrl: "",
+    techStack: {}
   }
 };
 
@@ -414,9 +423,35 @@ function generateProductsSection(repos, commits = []) {
     const description = override.description || repo.description || "High-performance application focused on scalability and user experience.";
     const url = repo.url;
     const liveLink = override.homepageUrl || repo.homepageUrl;
+    const techStack = override.techStack || {};
 
     markdown += `### 📦 [${name}](${url})\n\n`;
     markdown += `> ${description}\n\n`;
+    
+    // Add tech stack if available
+    if (Object.keys(techStack).length > 0) {
+      if (techStack.languages?.length > 0) {
+        markdown += `* **Languages:** ${techStack.languages.join(", ")}\n`;
+      }
+      if (techStack.backend?.length > 0) {
+        markdown += `* **Backend:** ${techStack.backend.join(", ")}\n`;
+      }
+      if (techStack.frontend?.length > 0) {
+        markdown += `* **Frontend:** ${techStack.frontend.join(", ")}\n`;
+      }
+      if (techStack.database?.length > 0) {
+        markdown += `* **Database:** ${techStack.database.join(", ")}\n`;
+      }
+      if (techStack.buildTool?.length > 0) {
+        markdown += `* **Build Tool:** ${techStack.buildTool.join(", ")}\n`;
+      }
+      if (techStack.testing?.length > 0) {
+        markdown += `* **Testing:** ${techStack.testing.join(", ")}\n`;
+      }
+      markdown += "\n";
+    } else {
+      markdown += `*Coming Soon*\n\n`;
+    }
     
     const links = [];
     links.push(`[Source Code](${url})`);

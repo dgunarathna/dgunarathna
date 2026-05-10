@@ -48,6 +48,13 @@ Product/UX Design Engineer bridging UX and engineering to build fast, scalable, 
 
 > A professional-grade Inventory Management System (IMS) built with Spring Boot, Thymeleaf, and MySQL. Features real-time stock tracking, advanced reporting, and secure role-based access control.
 
+* **Languages:** Java
+* **Backend:** Spring Boot, Spring Data JPA, Lombok
+* **Frontend:** Thymeleaf, Bootstrap, jQuery, DataTables, Chart.js
+* **Database:** MySQL, H2
+* **Build Tool:** Gradle
+* **Testing:** JUnit
+
 [Source Code](https://github.com/dgunarathna/ereamart) | [Live Demo](https://ereamart.onrender.com)
 
 ---
@@ -55,6 +62,8 @@ Product/UX Design Engineer bridging UX and engineering to build fast, scalable, 
 ### 📦 [SketchAir](https://github.com/dgunarathna/SketchAir)
 
 > An innovative design-focused application showcasing advanced UI/UX principles and interactive web components.
+
+*Coming Soon* 
 
 [Source Code](https://github.com/dgunarathna/SketchAir)
 
