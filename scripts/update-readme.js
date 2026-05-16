@@ -474,10 +474,9 @@ function updateReadme() {
     let resultCount = 0;
 
     if (FEED_TYPE === "products") {
-      const repos = getOwnedRepositories();
-      const commits = getAllRecentCommits();
-      newContributions = generateProductsSection(repos, commits);
-      resultCount = repos.length;
+      // Products section is manually maintained - skip auto-generation
+      console.log("ℹ️  Products section is manually maintained. No auto-generation performed.");
+      return;
     } else if (FEED_TYPE === "prs") {
       const prs = getAllRecentPrs();
       newContributions = generatePrContributionsSection(prs, contributions);
