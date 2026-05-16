@@ -42,7 +42,7 @@ Product/UX Design Engineer bridging UX and engineering to build fast, scalable, 
 <!-- AUTO-GENERATED SECTION START -->
 | 📁 Featured Products | 🌐 Live Demos | 📊 Total Commits |
 | :---: | :---: | :---: |
-| 2 | 1 | 203 |
+| 3 | 2 | 203 |
 
 ### 📦 [ereamart](https://github.com/dgunarathna/ereamart)
 
@@ -56,6 +56,21 @@ Product/UX Design Engineer bridging UX and engineering to build fast, scalable, 
 * **Testing:** JUnit
 
 [Source Code](https://github.com/dgunarathna/ereamart) | [Live Demo](https://ereamart.onrender.com)
+
+---
+
+### 📦 [CV Job Matcher](https://github.com/dgunarathna/cv-job-matcher)
+
+> AI-powered job matching platform that analyzes your CV to find real matching vacancies worldwide. Upload your resume and get personalized job recommendations with match scores based on skills, experience, and preferences.
+
+* **Languages:** JavaScript, JSX
+* **Frontend:** React, Vite
+* **AI:** Anthropic Claude API (claude-sonnet-4), Web Search Integration
+* **Backend:** Vercel Serverless Functions
+* **Styling:** Tailwind CSS
+* **Features:** CV parsing, real-time job search, match scoring, region/work type filtering
+
+[Source Code](https://github.com/dgunarathna/cv-job-matcher) | [Live Demo](https://cv-job-matcher-eight.vercel.app/)
 
 ---
 
