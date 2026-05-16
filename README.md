@@ -42,7 +42,27 @@ Product/UX Design Engineer bridging UX and engineering to build fast, scalable, 
 <!-- AUTO-GENERATED SECTION START -->
 | 📁 Featured Products | 🌐 Live Demos | 📊 Total Commits |
 | :---: | :---: | :---: |
-| 2 | 1 | 206 |
+| 4 | 2 | 211 |
+
+### 📦 [cv-job-matcher](https://github.com/dgunarathna/cv-job-matcher)
+
+> High-performance application focused on scalability and user experience.
+
+*Coming Soon*
+
+[Source Code](https://github.com/dgunarathna/cv-job-matcher) | [Live Demo](https://cv-job-matcher-eight.vercel.app)
+
+---
+
+### 📦 [jobwatcher](https://github.com/dgunarathna/jobwatcher)
+
+> High-performance application focused on scalability and user experience.
+
+*Coming Soon*
+
+[Source Code](https://github.com/dgunarathna/jobwatcher)
+
+---
 
 ### 📦 [ereamart](https://github.com/dgunarathna/ereamart)
 
