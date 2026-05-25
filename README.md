@@ -74,6 +74,19 @@ Product/UX Design Engineer bridging UX and engineering to build fast, scalable, 
 
 ---
 
+### 📦 [RBC-Colombo---Restaurant-Bars-Cafe](https://github.com/dgunarathna/RBC-Colombo---Restaurant-Bars-Cafe)
+
+> Restaurant, bars, and cafe project for RBC Colombo.
+
+* **Languages:** JavaScript, HTML, CSS
+* **Frontend:** React, Vite
+* **Styling:** CSS3
+* **Deployment:** Vercel
+
+[Source Code](https://github.com/dgunarathna/RBC-Colombo---Restaurant-Bars-Cafe) | [Live Demo](https://rbc-colombo-restaurant-bars-cafe.vercel.app/)
+
+---
+
 ### 📦 [SketchAir](https://github.com/dgunarathna/SketchAir)
 
 > An innovative design-focused application showcasing advanced UI/UX principles and interactive web components.
