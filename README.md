@@ -55,7 +55,7 @@ Product/UX Design Engineer bridging UX and engineering to build fast, scalable, 
 * **Build Tool:** Gradle
 * **Testing:** JUnit
 
-[Source Code](https://github.com/dgunarathna/ereamart) | [Live Demo](https://ereamart.onrender.com)
+[Source Code](https://github.com/dgunarathna/ereamart) | [Live Demo](https://ereamart.onrender.com) | [Design](https://www.figma.com/design/SkPb2nXXZO0ZHFnk7LrWIF/Ereamart?node-id=1-1655&t=17D6H5NRN5TDn1kP-1)
 
 ---
 
