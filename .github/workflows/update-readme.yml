@@ -92,9 +92,10 @@ jobs:
           done
 
       # -----------------------
-      # 7. Send email (SMTP)
+      # 7. Send email (SMTP) — only if changes were made
       # -----------------------
       - name: Send email notification
+        if: steps.diff.outputs.content != ''
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com
