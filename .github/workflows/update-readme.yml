@@ -1,8 +1,6 @@
 name: Update Profile Contributions + Email Report
 
 on:
-  schedule:
-    - cron: "0 12 * * *" # every day at 12 PM UTC
   workflow_dispatch:
 
 concurrency:
