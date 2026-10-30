@@ -10,7 +10,7 @@ Product/UX Design Engineer bridging UX and engineering to build fast, scalable, 
 * ⚡ Strong in fast iteration, maintainable architecture, and automation workflows
 * 🧠 Connect design, code, and delivery through clean engineering practices
 * 🛠️ Build customer-facing products and internal developer tools
-* 🏢 Work Profile: [dhanushkacreately](https://github.com/dhanushkacreately)
+* 🏢 Work Profiles: [dhanushkacreately](https://github.com/dhanushkacreately)
 * 📊 Maintain 11 repositories across public and private projects
 
 ---
